@@ -88,8 +88,7 @@ In this feature, you are giving the user the ability to reset the game and play 
     - add a conditional statement at the top of the function which returns the string "0%" when the `attempts` variable contains a falsy value.
   - Example functionality:
     ![fixed percentage](../feature-gifs/fixed-percentage.gif)
-  - When your functionality matches the above, Congratulations!!! you have completed the MVP for the Memory Match Game!!!
-  - Move on to the `After The Final Feature` section below.
+  - When your functionality matches the above move on to the `After The Final Feature` section below.
 
 ### After Each Feature
 
