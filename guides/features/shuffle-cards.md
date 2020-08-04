@@ -12,7 +12,7 @@ In this feature:
   - The order of the logo images must be random when the game begins, and when the game is reset.
     - Example of shuffling:
     ![shuffling example](../feature-gifs/shuffle.gif)
-- When your game card images are being shuffled on game start and game reset, move on to the `After Each Feature` section below.
+- When your game card images are being shuffled on game start and game reset, Congratulations on completing the MVP!!! Move on to the `After Each Feature` section below!
 
 
 ### After Each Feature
