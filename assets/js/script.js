@@ -6,6 +6,5 @@ function handleClick(event) {
   if (event.target.className.indexOf("card-back") === -1) {
     return;
   }
-  var hidden = event.target
-  hidden.className = "hidden"
+  event.target.classList.add('hidden')
 }
