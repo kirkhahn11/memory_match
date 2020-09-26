@@ -1,1 +1,45 @@
+body {
+  height: 97vh;
+  background-color: #fff0db;
+  background-image: url(../images/lfz-background.jpg);
+}
 
+.container {
+  height: 100%;
+}
+
+.header {
+  height: 50px;
+  justify-content: center;
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc(100% / 6);
+  height: 100%;
+}
+
+aside {
+  height: 25%;
+}
+
+.background {
+  margin: 7px 2px;
+  background-image: url(../images/lfz-card.jpg);
+  background-size: 100%;
+  background-position: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.stats {
+  background-color: skyblue;
+  margin: 7px 20px;
+  padding: 20px 1px;
+  text-align: center;
+}
