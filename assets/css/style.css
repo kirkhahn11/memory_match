@@ -15,7 +15,7 @@ body {
   font-weight: 900;
 }
 
-#main {
+#gameCards {
   display: flex;
   flex-wrap: wrap;
   flex-basis: calc(100% / 6);
@@ -28,9 +28,7 @@ aside {
 
 .background {
   margin: 7px 2px;
-  background-image: url(../images/lfz-card.jpg);
-  background-size: 100%;
-  background-position: center;
+  position: relative;
 }
 
 .center {
@@ -42,4 +40,57 @@ aside {
   margin: 7px 20px;
   padding: 20px 1px;
   text-align: center;
+}
+
+.card-front, .card-back {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+}
+
+.card-back {
+  background-image: url(../images/lfz-card.jpg);
+}
+
+.js-logo {
+  background-image: url(../images/js-logo.png);
+}
+
+.css-logo {
+  background-image: url(../images/css-logo.png);
+}
+
+.docker-logo {
+  background-image: url(../images/docker-logo.jpg);
+}
+
+.gitHub-logo {
+  background-image: url(../images/gitHub-logo.png);
+}
+
+.html-logo {
+  background-image: url(../images/html-logo.png);
+}
+
+.mysql-logo {
+  background-image: url(../images/mysql-logo.jpg);
+}
+
+.node-logo {
+  background-image: url(../images/node-logo.png);
+}
+
+.php-logo {
+  background-image: url(../images/php-logo.jpeg);
+}
+
+.react-logo {
+  background-image: url(../images/react-logo.png);
+}
+
+.hiddne {
+  display: none;
 }
