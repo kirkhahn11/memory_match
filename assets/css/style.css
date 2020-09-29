@@ -91,6 +91,15 @@ aside {
   background-image: url(../images/react-logo.png);
 }
 
+.modal {
+  position: fixed;
+  top: 31%;
+  left: 36%;
+  background-color: blue;
+  padding: 86px;
+  font-size: 25px;
+}
+
 .hidden {
   display: none;
 }

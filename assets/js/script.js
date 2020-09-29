@@ -5,6 +5,7 @@ var firstCardClasses
 var secondCardClasses
 var maxMatches = 9
 var matches = 0
+var modal = document.querySelector('.modal')
 gameCards.addEventListener('click', handleClick);
 
 function handleClick(event) {
@@ -36,6 +37,6 @@ function handleClick(event) {
       }
     }
     if(maxMatches === matches) {
-      console.log('You Have Won!')
+      modal.classList.remove('hidden')
     }
 }
