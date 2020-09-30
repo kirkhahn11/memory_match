@@ -5,8 +5,14 @@ var firstCardClasses
 var secondCardClasses
 var maxMatches = 9
 var matches = 0
+var attempts = 0
+var gamesPlayed = 0
+var gamesPlayedCount = document.getElementById('gamesPlayed')
+var attemptsCount = document.getElementById('attempts')
+var accuracy = document.getElementById('accuracy')
 var modal = document.querySelector('.modal')
 gameCards.addEventListener('click', handleClick);
+
 
 function handleClick(event) {
   if (event.target.className.indexOf("card-back") === -1) {
@@ -25,7 +31,8 @@ function handleClick(event) {
         firstCardClicked = null
         secondCardClicked = null
         matches++
-        console.log(matches)
+        attempts++
+        displayStats()
       } else {
         setTimeout(function () {
           firstCardClicked.classList.remove('hidden')
@@ -33,10 +40,22 @@ function handleClick(event) {
           gameCards.addEventListener('click', handleClick)
           firstCardClicked = null
           secondCardClicked = null
+          attempts++
+          displayStats()
         }, 1500)
       }
     }
     if(maxMatches === matches) {
       modal.classList.remove('hidden')
     }
+}
+
+function displayStats() {
+  gamesPlayedCount.textContent = gamesPlayed
+  attemptsCount.textContent = attempts
+  accuracy.textContent = calculateAccuracy(attempts, matches)
+}
+
+function calculateAccuracy(attempts, matches) {
+  return Math.trunc((matches / attempts) *100) + "%"
 }
