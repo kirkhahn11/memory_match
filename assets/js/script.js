@@ -1,5 +1,10 @@
 var gameCards = document.getElementById('gameCards')
-console.log(gameCards)
+var firstCardClicked
+var secondCardClicked
+var firstCardClasses
+var secondCardClasses
+var maxMatches = 9
+var matches = 0
 gameCards.addEventListener('click', handleClick);
 
 function handleClick(event) {
@@ -7,4 +12,30 @@ function handleClick(event) {
     return;
   }
   event.target.classList.add('hidden')
+  if(!firstCardClicked) {
+    firstCardClicked = event.target
+    firstCardClasses = firstCardClicked.previousElementSibling.className
+  } else {
+      secondCardClicked = event.target
+      secondCardClasses = secondCardClicked.previousElementSibling.className
+      gameCards.removeEventListener('click', handleClick)
+      if (firstCardClasses === secondCardClasses) {
+        gameCards.addEventListener('click', handleClick)
+        firstCardClicked = null
+        secondCardClicked = null
+        matches++
+        console.log(matches)
+      } else {
+        setTimeout(function () {
+          firstCardClicked.classList.remove('hidden')
+          secondCardClicked.classList.remove('hidden')
+          gameCards.addEventListener('click', handleClick)
+          firstCardClicked = null
+          secondCardClicked = null
+        }, 1500)
+      }
+    }
+    if(maxMatches === matches) {
+      console.log('You Have Won!')
+    }
 }
