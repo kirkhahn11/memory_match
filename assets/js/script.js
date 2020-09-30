@@ -7,6 +7,15 @@ var logo = [
   "mysql-logo",
   "node-logo",
   "php-logo",
+  "react-logo",
+  "css-logo",
+  "docker-logo",
+  "gitHub-logo",
+  "html-logo",
+  "js-logo",
+  "mysql-logo",
+  "node-logo",
+  "php-logo",
   "react-logo"
 ]
 var gameCards = document.getElementById('gameCards')
@@ -26,9 +35,10 @@ var replay = document.getElementById('replay')
 gameCards.addEventListener('click', handleClick);
 
 startGame()
-startGame()
+
 
 function startGame() {
+  shuffle(logo)
   for(var i = 0; i < logo.length; i++) {
   var newDiv = document.createElement('div')
   newDiv.classList.add('background', 'col-2')
@@ -41,6 +51,18 @@ function startGame() {
   newDiv3.classList.add('card-back')
   newDiv.append(newDiv3)
   }
+}
+
+function shuffle(array) {
+  var m = array.length;
+  var t;
+  var i;
+  while(m) {
+    i = Math.floor(Math.random() * m--);
+    t = array[m];
+    array[m] = array[i];
+    array[i] = t;
+  } return array
 }
 
 var cardBack = document.querySelectorAll('.card-back')
@@ -101,7 +123,15 @@ function resetGame() {
   gamesPlayed++
   displayStats()
   resetCard()
+  removeChildren()
+  startGame()
   modal.classList.add('hidden')
+}
+
+function removeChildren() {
+  while(gameCards.firstChild) {
+    gameCards.removeChild(gameCards.firstChild)
+  }
 }
 
 function resetCard() {
