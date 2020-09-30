@@ -1,3 +1,14 @@
+var logo = [
+  "css-logo",
+  "docker-logo",
+  "gitHub-logo",
+  "html-logo",
+  "js-logo",
+  "mysql-logo",
+  "node-logo",
+  "php-logo",
+  "react-logo"
+]
 var gameCards = document.getElementById('gameCards')
 var firstCardClicked
 var secondCardClicked
@@ -11,10 +22,28 @@ var gamesPlayedCount = document.getElementById('gamesPlayed')
 var attemptsCount = document.getElementById('attempts')
 var accuracy = document.getElementById('accuracy')
 var modal = document.querySelector('.modal')
-var cardBack = document.querySelectorAll('.card-back')
 var replay = document.getElementById('replay')
 gameCards.addEventListener('click', handleClick);
 
+startGame()
+startGame()
+
+function startGame() {
+  for(var i = 0; i < logo.length; i++) {
+  var newDiv = document.createElement('div')
+  newDiv.classList.add('background', 'col-2')
+  gameCards.append(newDiv)
+  var newDiv2 = document.createElement('div')
+  newDiv.append(newDiv2)
+  newDiv2.className = logo[i]
+  newDiv2.classList.add('card-front')
+  var newDiv3 = document.createElement('div')
+  newDiv3.classList.add('card-back')
+  newDiv.append(newDiv3)
+  }
+}
+
+var cardBack = document.querySelectorAll('.card-back')
 
 function handleClick(event) {
   if (event.target.className.indexOf("card-back") === -1) {
