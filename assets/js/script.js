@@ -11,6 +11,8 @@ var gamesPlayedCount = document.getElementById('gamesPlayed')
 var attemptsCount = document.getElementById('attempts')
 var accuracy = document.getElementById('accuracy')
 var modal = document.querySelector('.modal')
+var cardBack = document.querySelectorAll('.card-back')
+var replay = document.getElementById('replay')
 gameCards.addEventListener('click', handleClick);
 
 
@@ -57,5 +59,26 @@ function displayStats() {
 }
 
 function calculateAccuracy(attempts, matches) {
+  if(!attempts) {
+    return '0%'
+  } else{
   return Math.trunc((matches / attempts) *100) + "%"
+  }
 }
+
+function resetGame() {
+  matches = 0
+  attempts = 0
+  gamesPlayed++
+  displayStats()
+  resetCard()
+  modal.classList.add('hidden')
+}
+
+function resetCard() {
+  for(var i = 0; i < cardBack.length; i++) {
+    cardBack[i].classList.remove('hidden')
+  }
+}
+
+replay.addEventListener('click', resetGame)

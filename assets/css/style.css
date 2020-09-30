@@ -100,6 +100,16 @@ aside {
   font-size: 25px;
 }
 
+.replay {
+  padding: 25px;
+  font-size: 15px;
+}
+
+.button-style {
+  text-align: center;
+  margin-top: 50px;
+}
+
 .hidden {
   display: none;
 }
