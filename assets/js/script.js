@@ -24,6 +24,7 @@ var secondCardClicked
 var firstCardClasses
 var secondCardClasses
 var maxMatches = 9
+var maxAttempts = 20
 var matches = 0
 var attempts = 0
 var gamesPlayed = 0
@@ -31,7 +32,9 @@ var gamesPlayedCount = document.getElementById('gamesPlayed')
 var attemptsCount = document.getElementById('attempts')
 var accuracy = document.getElementById('accuracy')
 var modal = document.querySelector('.modal')
+var modalTwo = document.querySelector('.modal-two')
 var replay = document.getElementById('replay')
+var replayTwo = document.getElementById('replay-two')
 gameCards.addEventListener('click', handleClick);
 
 startGame()
@@ -101,6 +104,10 @@ function handleClick(event) {
     if(maxMatches === matches) {
       modal.classList.remove('hidden')
     }
+    if(maxAttempts === attempts && maxMatches !== matches) {
+      modalTwo.classList.remove('hidden')
+      gameCards.removeEventListener('click', handleClick)
+    }
 }
 
 function displayStats() {
@@ -126,6 +133,8 @@ function resetGame() {
   removeChildren()
   startGame()
   modal.classList.add('hidden')
+  modalTwo.classList.add('hidden')
+  gameCards.addEventListener('click', handleClick)
 }
 
 function removeChildren() {
@@ -141,3 +150,4 @@ function resetCard() {
 }
 
 replay.addEventListener('click', resetGame)
+replayTwo.addEventListener('click', resetGame)
