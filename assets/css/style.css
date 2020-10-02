@@ -91,13 +91,22 @@ aside {
   background-image: url(../images/react-logo.png);
 }
 
-.modal {
+.modal{
+  padding: 86px
+}
+
+.modal,
+.modal-two {
   position: fixed;
   top: 31%;
   left: 36%;
   background-color: blue;
-  padding: 86px;
   font-size: 25px;
+}
+
+.modal-two {
+  text-align: center;
+  padding: 50px;
 }
 
 .replay {
