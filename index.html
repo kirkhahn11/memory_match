@@ -4,11 +4,18 @@
     <title>Memory Match Game</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/grid.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <img id="image" src="assets/images/Happy.png" alt="Happy stick figure">
+    <div class="intro">
+      <div id="text-read"></div>
+      <button id="start-game" class="hidden">Start Game</button>
+    </div>
+    <div class="container hidden">
       <div class="row header">
-        <header>LFZ Memory Match</header>
+        <header>Happy's Happy Day!!!</header>
       </div>
       <div class="row">
         <div class="col-2">
@@ -31,15 +38,15 @@
       </div>
     </div>
     <div class="modal hidden">
-      <div>Congratulations You Have WON!!</div>
+      <div>Congratulations!!!!<br>Happy made it through another day!!!</div>
       <div class="button-style">
-        <button class="replay" id="replay">Would You Like to Play Again?</button>
+        <button class="replay" id="replay">Tomorrow is a new day!!!<br> Try Again?!?</button>
       </div>
     </div>
         <div class="modal-two hidden">
-          <div>you LOSE!!!</div>
+          <div>May the darkness I face one day become light...<br>-Happy</div>
           <div class="button-style">
-            <button class="replay" id="replay-two">Would You Like to Play Again?</button>
+            <button class="replay-two" id="replay-two">Restart the day?!?</button>
           </div>
         </div>
     <script src="../memory_match/assets/js/script.js"></script>

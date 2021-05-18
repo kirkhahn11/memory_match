@@ -1,7 +1,34 @@
 body {
   height: 97vh;
-  background-color: #fff0db;
-  background-image: url(../images/lfz-background.jpg);
+}
+
+img {
+  height: 100%;
+}
+
+.intro{
+  display: inline-block;
+  text-align: center;
+}
+
+.happy {
+  background-image: url(../images/Happy.png);
+  background-size: cover;
+}
+
+#text-read {
+  border: 1px solid black;
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  bottom: 400px;
+  line-height: 20px;
+}
+
+#start-game {
+  position: absolute;
+  bottom: 300px;
+  right: 625px;
 }
 
 .container {
@@ -9,9 +36,10 @@ body {
 }
 
 .header {
+  font-family: 'Bangers', cursive;
   height: 50px;
   justify-content: center;
-  font-size: xx-large;
+  font-size: 55px;
   font-weight: 900;
 }
 
@@ -36,13 +64,15 @@ aside {
 }
 
 .stats {
-  background-color: skyblue;
+  font-family: 'Bangers', cursive;
+  background-color: #ff00ff;
   margin: 7px 20px;
   padding: 20px 1px;
   text-align: center;
 }
 
-.card-front, .card-back {
+.card-front, .card-back, .card-back-two, .card-back-three,
+.card-back-four, .card-back-five {
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -51,67 +81,104 @@ aside {
   position: absolute;
 }
 
+.card-back-five{
+  background-image: url(../images/sad-face.png);
+}
+
+.card-back-four {
+  background-image: url(../images/sadish-face.png)
+}
+
+.card-back-three {
+  background-image: url(../images/ok-face.png);
+}
+
+.card-back-two {
+  background-image: url(../images/270-2709350_smiley-face-black-and-white-laughing-stick-figure.png);
+}
+
 .card-back {
-  background-image: url(../images/lfz-card.jpg);
+  background-image: url(../images/152-1529091_happy-smile-png-smiley-face-icon-png.png);
 }
 
-.js-logo {
-  background-image: url(../images/js-logo.png);
+.listen-to-music {
+  background-image: url(../images/listen-to-music.jpg);
 }
 
-.css-logo {
-  background-image: url(../images/css-logo.png);
+.drink-water {
+  background-image: url(../images/drink-water.png);
 }
 
-.docker-logo {
-  background-image: url(../images/docker-logo.jpg);
+.exercise {
+  background-image: url(../images/exercise.png);
 }
 
-.gitHub-logo {
-  background-image: url(../images/gitHub-logo.png);
+.date {
+  background-image: url(../images/date.png);
 }
 
-.html-logo {
-  background-image: url(../images/html-logo.png);
+.talking-to-friends {
+  background-image: url(../images/talking-to-friends.png);
 }
 
-.mysql-logo {
-  background-image: url(../images/mysql-logo.jpg);
+.being-creative {
+  background-image: url(../images/being-creative.jpg);
 }
 
-.node-logo {
-  background-image: url(../images/node-logo.png);
+.enjoy-the-world {
+  background-image: url(../images/enjoy-the-world.jpg);
 }
 
-.php-logo {
-  background-image: url(../images/php-logo.jpeg);
+.puppies {
+  background-image: url(../images/puppies.jpg);
 }
 
-.react-logo {
-  background-image: url(../images/react-logo.png);
+.being-weird {
+  background-image: url(../images/being-weird.jpg);
 }
 
 .modal{
-  padding: 86px
+  width: 100%;
+  height: 50%;
+  line-height: 50px;
+  background-color: #8F00FF;
+  color: cyan;
+  text-shadow: 2px 2px darkblue;
+  font-size: 25px;
 }
 
 .modal,
 .modal-two {
   position: fixed;
-  top: 31%;
-  left: 36%;
-  background-color: blue;
-  font-size: 25px;
+  top: 25%;
+  text-align: center;
+  font-family: 'Bangers', cursive;
 }
 
 .modal-two {
-  text-align: center;
-  padding: 50px;
+  font-family: 'La Belle Aurore', cursive;
+  background-color: #483D8B;
+  width: 100%;
+  height: 58%;
+  line-height: 90px;
+  text-shadow: 1px 1px grey;
+  font-size: 50px;
 }
 
 .replay {
-  padding: 25px;
-  font-size: 15px;
+  background-color: white;
+  border: 5px solid cyan;
+  padding: 15px 50px;
+  font-size: 20px;
+  border-radius: 15px;
+}
+
+.replay-two {
+  background-color: white;
+  border: 5px solid black;
+  padding: 15px 50px;
+  font-size: 20px;
+  border-radius: 15px;
 }
 
 .button-style {
