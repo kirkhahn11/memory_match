@@ -85,7 +85,7 @@ introText.addEventListener('click', function() {
     introText.classList.add('hidden')
     document.body.style.backgroundColor = 'black'
     newHeader = document.createElement('header')
-    newText = document.createTextNode('ESCAPE THE DREAD!!!')
+    newText = document.createTextNode('ESCAPE THE DREAD!!!!')
     newHeader.appendChild(newText)
     newHeader.style.color = 'white'
     newHeader.style.fontSize = '200px'
